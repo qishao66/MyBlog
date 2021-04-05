@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="css/responsive.css">
+    <style type="text/css">
+        body{ font: normal 100% 'Arial','Helvetica','Verdana',sans-serif; color: #333; }
+        p { padding: 12px 0; margin: 0; font-size: .8em; line-height: 1.5; } form { margin: 0; }
+        #search_box { width: 201px; height: 31px; background: url(img/gif/bbox.gif); }
+        #search_box #s { float: left; padding: 0; margin: -18px 0 0 6px; border: 0; width: 159px; background: none; font-size: .8em; }
+        #search_box #go { float: right; margin: 3px 4px 0 0; }
+        .header-search-wrap{margin-top: 17px; margin-left: 50px}
+    </style>
 </head>
 
 <body>
@@ -104,18 +112,10 @@
                         <div class="ltn__header-options">
                             <!-- header-search-1 -->
                             <div class="header-search-wrap">
-                                <div class="header-search-1">
-                                    <div class="search-icon">
-                                        <i class="icon-search for-search-show"></i>
-                                        <i class="icon-cancel  for-search-close"></i>
-                                    </div>
-                                </div>
-                                <div class="header-search-1-form">
-                                    <form id="#" method="get"  action="#">
-                                        <input type="text" name="search" value="" placeholder="请输入您要搜索的内容..."/>
-                                        <button type="submit">
-                                            <span><i class="icon-search"></i></span>
-                                        </button>
+                                <div id="search_box">
+                                    <form id="search_form" action="http://www.baidu.com.cn/s">
+                                        <input type="text" id="s" placeholder="请输入您要搜索的内容..." required class="swap_value" name="wd"/>
+                                        <input type="image" src="img/gif/box.gif" width="27" height="24" id="go" alt="Search" title="Search" />
                                     </form>
                                 </div>
                             </div>
@@ -137,7 +137,64 @@
         <!-- ltn__header-middle-area end -->
     </header>
     <!-- HEADER AREA END -->
+
+    <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu-search-form">
+                <div id="search_box">
+                    <form id="search_form" action="http://www.baidu.com.cn/s">
+                        <input type="text" id="s" placeholder="请输入您要搜索的内容..." required class="swap_value" name="wd"/>
+                        <input type="image" src="img/gif/box.gif" width="27" height="24" id="go" alt="Search" title="Search" />
+                    </form>
+                </div>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="#">主页风格</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">风格一</a></li>
+                            <li><a href="#">风格二</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About me</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">个人介绍</a></li>
+                            <li><a href="coming-soon.html">个人风采</a></li>
+                            <li><a href="#">联系我</a>
+                                <ul>远在天边，近在眼前！！！</ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">妙文</a>
+                        <ul class="sub-menu">
+                            <li><a href="lizhi.html">励志语录</a></li>
+                            <li><a href="haoju.html">好句好段</a></li>
+                            <li><a href="sq.html">睡前故事</a></li>
+                            <li><a href="qh.html">土味情话</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">随</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">随想</a></li>
+                            <li><a href="#">随论</a></li>
+                            <li><a href="#">随看</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Utilize Mobile Menu End -->
+
     <div class="ltn__utilize-overlay"></div>
+
     <!-- SLIDER AREA START (slider-1) -->
     <div class="ltn__slider-area ltn__slider-6 mb-120">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
@@ -313,7 +370,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="ltn__copyright-design clearfix">
-                            <p><a target="_blank" href="index.html">Qi shao blog</a></p>
+                            <p><a href="index.html">Qi shao blog</a></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-12 align-self-center">
